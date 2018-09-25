@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MonthlySavings" representedClassName="MonthlySavings" syncable="YES" codeGenerationType="class">
+        <attribute name="amountRepresentation" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isMonthComplete" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isOverspent" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="month" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Transactions" representedClassName="Transactions" syncable="YES" codeGenerationType="class">
+        <attribute name="amountRepresentation" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="category" attributeType="String" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="frivolous" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="WeeklySavings" representedClassName="WeeklySavings" syncable="YES" codeGenerationType="class">
+        <attribute name="amountRepresentation" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isOverspent" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="isWeekComplete" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="weekNumber" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MonthlySavings" positionX="-36" positionY="27" width="128" height="30"/>
+        <element name="Transactions" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="WeeklySavings" positionX="-54" positionY="18" width="128" height="30"/>
+    </elements>
+</model>

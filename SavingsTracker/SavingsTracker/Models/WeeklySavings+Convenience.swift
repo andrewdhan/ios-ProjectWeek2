@@ -10,19 +10,18 @@ import Foundation
 import CoreData
 
 extension WeeklySavings{
-    convenience init(amount: Double, startDate: Date, weekNumber: Int, isWeekComplete: Bool = false, context:NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    @discardableResult convenience init(amount: Double, weekNumber: Int, isWeekComplete: Bool = false, context:NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
         
-        self.amountRepresentation = Int32(abs(amount))
+        self.amountRepresentation = Int32(abs(amount*100))
         self.weekNumber = Int16(weekNumber)
-        self.startDate = startDate
         self.isOverspent = amount<0 ? true : false
         self.isWeekComplete = isWeekComplete
         
     }
  
     func amount() ->NSDecimalNumber {
-        let number = UInt64(self.amountRepresentation)
+        let number = UInt64(abs(self.amountRepresentation))
         return NSDecimalNumber(mantissa: number, exponent: -2, isNegative: self.isOverspent)
     }
 

@@ -132,7 +132,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="Der-Xy-utq"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipE-6b-2KX">
                             <connections>
-                                <segue destination="1mO-bC-m0e" kind="presentation" id="Xgg-Ha-Evx"/>
+                                <segue destination="1mO-bC-m0e" kind="presentation" identifier="AddTransaction" id="Xgg-Ha-Evx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -207,6 +207,7 @@
                         <viewLayoutGuide key="safeArea" id="s51-fd-5L9"/>
                     </view>
                     <connections>
+                        <outlet property="amountLabel" destination="kSI-Cu-pAp" id="V8E-pk-Mat"/>
                         <outlet property="frivolousButton" destination="s2z-j1-4Sp" id="M4s-Kb-DLz"/>
                     </connections>
                 </viewController>

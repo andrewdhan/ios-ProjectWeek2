@@ -16,6 +16,13 @@ class AddTransactionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func addTransaction(_ sender: Any) {
+        guard let amountString = amountLabel.text,
+            let amount = Double(amountString),
+        let currentWeekSavings = currentWeekSavings,
+         let transaction = TransactionController.shared.create(amount: amount)else {return}
+       
+        WeeklySavingsController.shared.add(transaction: transaction, to: currentWeekSavings)
+        
     }
     @IBAction func toggleFrivolous(_ sender: Any) {
     }
@@ -30,6 +37,9 @@ class AddTransactionViewController: UIViewController {
     }
     */
 
+    @IBOutlet weak var amountLabel: UITextField!
     @IBOutlet weak var frivolousButton: UIButton!
     
+    private let weeklySavingsController = WeeklySavingsController()
+    private var currentWeekSavings: WeeklySavings? = nil
 }

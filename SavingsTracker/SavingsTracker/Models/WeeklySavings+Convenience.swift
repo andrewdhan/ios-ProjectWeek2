@@ -26,3 +26,11 @@ extension WeeklySavings{
     }
 
 }
+
+extension NSDecimalNumber {
+    func currencyStringValue() -> String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter.string(from: self) ?? "0"
+    }
+}

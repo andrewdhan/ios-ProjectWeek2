@@ -22,6 +22,7 @@ class AddTransactionViewController: UIViewController {
          let transaction = TransactionController.shared.create(amount: amount)else {return}
        
         WeeklySavingsController.shared.add(transaction: transaction, to: currentWeekSavings)
+        dismiss(animated: true, completion: nil)
         
     }
     @IBAction func toggleFrivolous(_ sender: Any) {
@@ -41,5 +42,5 @@ class AddTransactionViewController: UIViewController {
     @IBOutlet weak var frivolousButton: UIButton!
     
     private let weeklySavingsController = WeeklySavingsController()
-    private var currentWeekSavings: WeeklySavings? = nil
+    var currentWeekSavings: WeeklySavings? = nil
 }

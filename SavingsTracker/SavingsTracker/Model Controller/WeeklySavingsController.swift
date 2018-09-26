@@ -16,13 +16,13 @@ class WeeklySavingsController{
     init(){
     }
     //MARK: - CRUD
-    func create(amount: Double, weekNumber: Int, context: NSManagedObjectContext = moc){
+    @discardableResult func create(amount: Double, weekNumber: Int, context: NSManagedObjectContext = moc) -> WeeklySavings{
         guard amount.isCurrencyValue() else {
-            NSLog("Not currency value")
-            return
+            fatalError("Not currency value")
         }
-        WeeklySavings(amount: amount, weekNumber: weekNumber, context: context)
+        let result = WeeklySavings(amount: amount, weekNumber: weekNumber, context: context)
         save()
+        return result
     }
     func delete(weeklySavings: WeeklySavings, context:NSManagedObjectContext = moc){
         context.delete(weeklySavings)
@@ -31,6 +31,7 @@ class WeeklySavingsController{
     func add(transaction:Transaction, to weeklySavings: WeeklySavings){
         let newAmount = weeklySavings.amount().adding( transaction.transactionAmount())
         weeklySavings.amountRepresentation = newAmount.multiplying(by: 100).int32Value
+        weeklySavings.isOverspent = newAmount.decimalValue < 0 ? true : false
         save()
     }
     

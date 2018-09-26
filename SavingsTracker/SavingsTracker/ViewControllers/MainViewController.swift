@@ -19,7 +19,8 @@ class MainViewController: UIViewController {
     }
     
     func updateView(){
-        amountLeftLabel.text = currentWeekSavings.amount().stringValue
+        print(currentWeekSavings)
+        amountLeftLabel.text = currentWeekSavings.amount().currencyStringValue()
     }
     
     // MARK: - Navigation
@@ -28,7 +29,7 @@ class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddTransaction"{
             let destinationVC = segue.destination as! AddTransactionViewController
-            
+            destinationVC.currentWeekSavings = currentWeekSavings
         }
     }
  
@@ -43,8 +44,8 @@ class MainViewController: UIViewController {
     
     lazy var currentWeekSavings:WeeklySavings = {
         let request: NSFetchRequest<WeeklySavings> = WeeklySavings.fetchRequest()
-        let weekNumber = Int16(Date().weekNumber())
-        request.predicate = NSPredicate(format: "weekNumber == %@", weekNumber)
+        let weekNumber = Date().weekNumber()
+        request.predicate = NSPredicate(format: "weekNumber == %@", NSNumber(value: weekNumber))
         
         var result: WeeklySavings? = nil
         
@@ -53,9 +54,11 @@ class MainViewController: UIViewController {
         } catch {
             NSLog("Error fetching single entry: \(error)")
         }
-        return result ?? WeeklySavings(amount: weeklyBudget, weekNumber: Date().weekNumber())
+        return result ?? weeklySavingsController.create(amount: weeklyBudget, weekNumber: Date().weekNumber())
     }()
     
     private let weeklyBudget = 100.00
+    private let weeklySavingsController = WeeklySavingsController.shared
+    private let transactionController = TransactionController.shared
     
 }

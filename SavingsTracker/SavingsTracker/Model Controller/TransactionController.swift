@@ -51,6 +51,6 @@ class TransactionController{
 
 extension Double{
     func isCurrencyValue() -> Bool{
-        return self.exponent == -2 ? true : false
+        return self.exponent >= -2 ? true : false
     }
 }

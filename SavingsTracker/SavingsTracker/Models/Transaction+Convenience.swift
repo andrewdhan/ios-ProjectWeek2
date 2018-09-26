@@ -10,9 +10,9 @@ import Foundation
 import CoreData
 
 extension Transaction {
-      @discardableResult convenience init(amount: Double, category: String, frivolous: Bool = false, date: Date = Date(), context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    @discardableResult convenience init(amount: Double, title: String, category: String, frivolous: Bool = false, date: Date = Date(), context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         self.init(context: context)
-        
+        self.title = title
         self.amountRepresentation = -Int32(abs(amount*100))
         self.category = category
         self.frivolous = frivolous

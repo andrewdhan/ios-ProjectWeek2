@@ -18,12 +18,12 @@ class TransactionController{
     init(){
     }
     //MARK: - CRUD
-    func create(amount: Double, category: String = "Any", context: NSManagedObjectContext = moc) -> Transaction?{
+    func create(amount: Double, title: String,  isFrivolous:Bool = false, category: String = "Any", context: NSManagedObjectContext = moc) -> Transaction?{
         guard amount.isCurrencyValue() else {
             NSLog("Not currency value")
             return nil
         }
-        let transaction = Transaction(amount: amount, category: category, context : context)
+        let transaction = Transaction(amount: amount, title: title, category: category, frivolous: isFrivolous, context : context)
         save()
         return transaction
     }

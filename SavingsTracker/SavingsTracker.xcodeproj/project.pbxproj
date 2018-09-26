@@ -20,6 +20,7 @@
 		10864DE4215AE4CD00B7B0F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */; };
 		10864DE6215AEAA200B7B0F4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */; };
 		10864DE8215AECEA00B7B0F4 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE7215AECEA00B7B0F4 /* TransactionController.swift */; };
+		10DA7993215BFEFA004442B5 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		10864DE7215AECEA00B7B0F4 /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
+		10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */,
 				10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */,
+				10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				1021CE1E215AA43E0099E011 /* WeeklySavings+Convenience.swift in Sources */,
 				10864DE8215AECEA00B7B0F4 /* TransactionController.swift in Sources */,
 				104858912159FB0200355145 /* Transaction+Convenience.swift in Sources */,
+				10DA7993215BFEFA004442B5 /* TransactionTableViewController.swift in Sources */,
 				1021CE22215AACB00099E011 /* MonthlySavings+Convenience.swift in Sources */,
 				10864DE6215AEAA200B7B0F4 /* AddTransactionViewController.swift in Sources */,
 			);

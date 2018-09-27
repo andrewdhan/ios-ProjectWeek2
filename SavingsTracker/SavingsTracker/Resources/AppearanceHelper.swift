@@ -24,6 +24,7 @@ enum Appearance {
         UITableViewCell.appearance().tintColor = Appearance.mainColor
         
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Appearance.mainColor], for: .normal)
+        UITabBar.appearance().tintColor = Appearance.mainColor
     }
 }
 

@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,13 +31,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="huT-rA-KuF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stats" id="xed-LX-r9b" userLabel="Stats"/>
+                    <tabBarItem key="tabBarItem" title="Stats" image="003-bar-chart" selectedImage="003-bar-chart" id="xed-LX-r9b" userLabel="Stats"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYq-0c-HMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="573.60000000000002" y="497.90104947526243"/>
         </scene>
-        <!--Transaction Table View Controller-->
+        <!--History-->
         <scene sceneID="HxI-TD-QM3">
             <objects>
                 <tableViewController id="n1T-H5-GQN" customClass="TransactionTableViewController" customModule="SavingsTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +76,7 @@
                             <outlet property="delegate" destination="n1T-H5-GQN" id="6zu-P0-txs"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" image="001-history-1" id="7if-EG-WXp"/>
+                    <tabBarItem key="tabBarItem" title="History" image="001-history" selectedImage="001-history" id="7if-EG-WXp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U7g-ow-weD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +159,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="znF-o4-KZG">
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="Der-Xy-utq"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipE-6b-2KX">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="ipE-6b-2KX">
                             <connections>
                                 <segue destination="gy7-u6-KhB" kind="presentation" identifier="AddTransaction" id="6Ya-cu-FuL"/>
                             </connections>
@@ -178,89 +177,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQF-gG-Yy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2404" y="-612.14392803598207"/>
-        </scene>
-        <!--Add Detail Controller-->
-        <scene sceneID="8fu-TD-XJw">
-            <objects>
-                <viewController id="1mO-bC-m0e" customClass="AddDetailController" customModule="SavingsTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1V0-D8-brt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C9k-jQ-8Uc">
-                                <rect key="frame" x="16" y="429.5" width="27" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="l8r-cY-YCl">
-                                <rect key="frame" x="16" y="71" width="382" height="158"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What did you buy?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7kY-vf-4L2">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="37"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How much was it?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-Cu-pAp">
-                                        <rect key="frame" x="0.0" y="45" width="382" height="37"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-1L-Prs">
-                                        <rect key="frame" x="0.0" y="90" width="382" height="30"/>
-                                        <state key="normal" title="Add Transaction"/>
-                                        <connections>
-                                            <action selector="addTransaction:" destination="1mO-bC-m0e" eventType="touchUpInside" id="R6D-bG-QQR"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cdb-h4-ENe">
-                                        <rect key="frame" x="0.0" y="128" width="382" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2z-j1-4Sp">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ssZ-nd-nsJ"/>
-                                                    <constraint firstAttribute="width" constant="30" id="tpT-kA-3Nj"/>
-                                                </constraints>
-                                                <state key="normal">
-                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toggleFrivolous:" destination="1mO-bC-m0e" eventType="touchUpInside" id="CjC-LK-SMu"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frivolous?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WT-9C-fO4">
-                                                <rect key="frame" x="38" y="5" width="344" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="s51-fd-5L9" firstAttribute="trailing" secondItem="l8r-cY-YCl" secondAttribute="trailing" constant="16" id="IWt-ME-Aao"/>
-                            <constraint firstItem="l8r-cY-YCl" firstAttribute="centerY" secondItem="1V0-D8-brt" secondAttribute="centerY" id="Q16-O9-5bC"/>
-                            <constraint firstItem="l8r-cY-YCl" firstAttribute="leading" secondItem="s51-fd-5L9" secondAttribute="leading" constant="16" id="ids-iO-kV7"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="s51-fd-5L9"/>
-                    </view>
-                    <value key="contentSizeForViewInPopover" type="size" width="414" height="300"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="300"/>
-                    <connections>
-                        <outlet property="amountLabel" destination="kSI-Cu-pAp" id="V8E-pk-Mat"/>
-                        <outlet property="frivolousButton" destination="s2z-j1-4Sp" id="M4s-Kb-DLz"/>
-                        <outlet property="titleLabel" destination="7kY-vf-4L2" id="Dsk-of-xEK"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G9y-Za-HKI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4219" y="-873"/>
         </scene>
         <!--Add Transaction View Controller-->
         <scene sceneID="3Cg-X6-HQK">
@@ -580,7 +496,7 @@
         <scene sceneID="OLz-Pk-7WL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7r0-7u-LfG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="kJ9-rO-Jjk"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="002-home" selectedImage="002-home" id="kJ9-rO-Jjk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qYU-Ax-R32">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -597,6 +513,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="001-history-1" width="30" height="30"/>
+        <image name="001-history" width="32" height="32"/>
+        <image name="002-home" width="32" height="32"/>
+        <image name="003-bar-chart" width="32" height="32"/>
     </resources>
 </document>

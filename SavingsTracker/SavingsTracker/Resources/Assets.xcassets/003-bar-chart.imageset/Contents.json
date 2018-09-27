@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "003-bar-chart.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "001-history.png",
       "scale" : "2x"
     },
     {

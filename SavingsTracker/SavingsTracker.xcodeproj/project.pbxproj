@@ -18,8 +18,10 @@
 		104858932159FBD000355145 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104858922159FBD000355145 /* CoreDataStack.swift */; };
 		10606860215B095F00E5FDAF /* WeeklySavingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060685F215B095F00E5FDAF /* WeeklySavingsController.swift */; };
 		10864DE4215AE4CD00B7B0F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */; };
-		10864DE6215AEAA200B7B0F4 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */; };
+		10864DE6215AEAA200B7B0F4 /* AddTransactionViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE5215AEAA200B7B0F4 /* AddTransactionViewController2.swift */; };
 		10864DE8215AECEA00B7B0F4 /* TransactionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10864DE7215AECEA00B7B0F4 /* TransactionController.swift */; };
+		1094EC01215CA29400FD9595 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1094EC00215CA29400FD9595 /* AddTransactionViewController.swift */; };
+		1094EC03215CA46200FD9595 /* DigitAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1094EC02215CA46200FD9595 /* DigitAccumulator.swift */; };
 		10DA7993215BFEFA004442B5 /* TransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +39,10 @@
 		104858922159FBD000355145 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		1060685F215B095F00E5FDAF /* WeeklySavingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklySavingsController.swift; sourceTree = "<group>"; };
 		10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		10864DE5215AEAA200B7B0F4 /* AddTransactionViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController2.swift; sourceTree = "<group>"; };
 		10864DE7215AECEA00B7B0F4 /* TransactionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionController.swift; sourceTree = "<group>"; };
+		1094EC00215CA29400FD9595 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
+		1094EC02215CA46200FD9595 /* DigitAccumulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitAccumulator.swift; sourceTree = "<group>"; };
 		10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +88,7 @@
 		1048588E21595C0600355145 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1094EC02215CA46200FD9595 /* DigitAccumulator.swift */,
 				1048587921595B0F00355145 /* AppDelegate.swift */,
 				1048588321595B1100355145 /* Assets.xcassets */,
 				1048588521595B1100355145 /* LaunchScreen.storyboard */,
@@ -108,8 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				10864DE3215AE4CD00B7B0F4 /* MainViewController.swift */,
-				10864DE5215AEAA200B7B0F4 /* AddTransactionViewController.swift */,
+				10864DE5215AEAA200B7B0F4 /* AddTransactionViewController2.swift */,
 				10DA7992215BFEFA004442B5 /* TransactionTableViewController.swift */,
+				1094EC00215CA29400FD9595 /* AddTransactionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1094EC03215CA46200FD9595 /* DigitAccumulator.swift in Sources */,
 				10606860215B095F00E5FDAF /* WeeklySavingsController.swift in Sources */,
 				10864DE4215AE4CD00B7B0F4 /* MainViewController.swift in Sources */,
 				104858932159FBD000355145 /* CoreDataStack.swift in Sources */,
+				1094EC01215CA29400FD9595 /* AddTransactionViewController.swift in Sources */,
 				1048588221595B0F00355145 /* SavingsTracker.xcdatamodeld in Sources */,
 				1048587A21595B0F00355145 /* AppDelegate.swift in Sources */,
 				1021CE1E215AA43E0099E011 /* WeeklySavings+Convenience.swift in Sources */,
@@ -204,7 +212,7 @@
 				104858912159FB0200355145 /* Transaction+Convenience.swift in Sources */,
 				10DA7993215BFEFA004442B5 /* TransactionTableViewController.swift in Sources */,
 				1021CE22215AACB00099E011 /* MonthlySavings+Convenience.swift in Sources */,
-				10864DE6215AEAA200B7B0F4 /* AddTransactionViewController.swift in Sources */,
+				10864DE6215AEAA200B7B0F4 /* AddTransactionViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

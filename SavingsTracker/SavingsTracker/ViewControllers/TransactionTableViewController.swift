@@ -12,23 +12,29 @@ import CoreData
 private let moc = CoreDataStack.shared.mainContext
 
 class TransactionTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//    }
-
+    
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //    }
+    
     // MARK: - Table view data source
-
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if fetchResultsController.sections?[section].indexTitle == "1"{
+            return "Frivolous Expenses"
+        } else {
+            return "Regular Expenses"
+        }
+    }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return fetchResultsController.sections?.count ?? 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchResultsController.sections?[section].numberOfObjects ?? 0
     }
-
-
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
         let transaction = fetchResultsController.object(at: indexPath)
@@ -36,7 +42,7 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         cell.detailTextLabel?.text = transaction.transactionAmount().currencyStringValue()
         return cell
     }
-
+    
     // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

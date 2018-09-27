@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		101CA115215D51EC00966F93 /* AppearanceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101CA114215D51EC00966F93 /* AppearanceHelper.swift */; };
 		1021CE1E215AA43E0099E011 /* WeeklySavings+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021CE1D215AA43E0099E011 /* WeeklySavings+Convenience.swift */; };
 		1021CE22215AACB00099E011 /* MonthlySavings+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1021CE21215AACB00099E011 /* MonthlySavings+Convenience.swift */; };
 		1048587A21595B0F00355145 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1048587921595B0F00355145 /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		101CA114215D51EC00966F93 /* AppearanceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceHelper.swift; sourceTree = "<group>"; };
 		1021CE1D215AA43E0099E011 /* WeeklySavings+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklySavings+Convenience.swift"; sourceTree = "<group>"; };
 		1021CE21215AACB00099E011 /* MonthlySavings+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthlySavings+Convenience.swift"; sourceTree = "<group>"; };
 		1048587621595B0F00355145 /* SavingsTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavingsTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 				1048588321595B1100355145 /* Assets.xcassets */,
 				1048588521595B1100355145 /* LaunchScreen.storyboard */,
 				1048588821595B1100355145 /* Info.plist */,
+				101CA114215D51EC00966F93 /* AppearanceHelper.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				1094EC03215CA46200FD9595 /* DigitAccumulator.swift in Sources */,
 				10606860215B095F00E5FDAF /* WeeklySavingsController.swift in Sources */,
 				10864DE4215AE4CD00B7B0F4 /* MainViewController.swift in Sources */,
+				101CA115215D51EC00966F93 /* AppearanceHelper.swift in Sources */,
 				104858932159FBD000355145 /* CoreDataStack.swift in Sources */,
 				1094EC01215CA29400FD9595 /* AddTransactionViewController.swift in Sources */,
 				1048588221595B0F00355145 /* SavingsTracker.xcdatamodeld in Sources */,

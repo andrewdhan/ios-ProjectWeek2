@@ -13,6 +13,7 @@ public enum DigitAccumulatorError: Error {
     case invalidDigitNumberValue
     case emptyValue
     case invalidCurrency
+    case unsupportedAmount
 }
 
 public struct DigitAccumulator {
@@ -22,11 +23,12 @@ public struct DigitAccumulator {
     }
     
     
-    public init(){
-        
-    }
+    public init(){}
     
     public mutating func add(digit: Digit) throws {
+        guard wholeComponent.count < 6 else {
+            throw DigitAccumulatorError.unsupportedAmount
+        }
         switch digit {
         case .decimalPoint:
             if hasDecimal {
@@ -67,6 +69,10 @@ public struct DigitAccumulator {
             wholeComponent.removeLast()
         }
     
+    }
+    public mutating func clear() {
+        wholeComponent = []
+        fractionalComponent = [Digit.number(0),Digit.number(0)]
     }
     
     func wholeStringValue() -> String {

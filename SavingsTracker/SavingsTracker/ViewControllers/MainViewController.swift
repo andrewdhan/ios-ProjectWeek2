@@ -19,7 +19,6 @@ class MainViewController: UIViewController {
     }
     
     func updateView(){
-        print(currentWeekSavings)
         amountLeftLabel.text = currentWeekSavings.amount().currencyStringValue()
     }
     

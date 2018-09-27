@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-np-da2">
-                                <rect key="frame" x="63" y="448" width="288" height="60"/>
+                                <rect key="frame" x="63" y="573" width="288" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW4-nv-re6">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -128,19 +128,33 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-05-bNO">
-                                <rect key="frame" x="148.5" y="263" width="117" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-Pq-80c" customClass="BudgetCircle" customModule="SavingsTracker" customModuleProvider="target">
+                                <rect key="frame" x="57" y="198" width="300" height="300"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-05-bNO">
+                                        <rect key="frame" x="75" y="121" width="150" height="58.5"/>
+                                        <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="1" height="-1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="u5X-05-bNO" firstAttribute="centerY" secondItem="xZv-Pq-80c" secondAttribute="centerY" id="iuw-50-yfZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="jUg-l3-q4a"/>
+                                    <constraint firstAttribute="width" constant="300" id="mWP-9o-aqX"/>
+                                    <constraint firstItem="u5X-05-bNO" firstAttribute="width" secondItem="xZv-Pq-80c" secondAttribute="width" multiplier="1/2" id="mie-7X-t7E"/>
+                                    <constraint firstItem="u5X-05-bNO" firstAttribute="centerX" secondItem="xZv-Pq-80c" secondAttribute="centerX" id="qoK-h4-7wA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CXb-np-da2" firstAttribute="top" secondItem="u5X-05-bNO" secondAttribute="bottom" constant="125" id="2Hi-Uj-0wx"/>
-                            <constraint firstItem="u5X-05-bNO" firstAttribute="top" secondItem="O8n-zc-2Vr" secondAttribute="top" constant="175" id="3Lt-RZ-wRV"/>
-                            <constraint firstItem="CXb-np-da2" firstAttribute="centerX" secondItem="0rb-1N-vPg" secondAttribute="centerX" id="EfD-84-3ko"/>
-                            <constraint firstItem="u5X-05-bNO" firstAttribute="centerX" secondItem="0rb-1N-vPg" secondAttribute="centerX" id="fA4-WM-8Ua"/>
+                            <constraint firstItem="CXb-np-da2" firstAttribute="centerX" secondItem="0rb-1N-vPg" secondAttribute="centerX" id="6Sc-SX-5uy"/>
+                            <constraint firstItem="CXb-np-da2" firstAttribute="top" secondItem="xZv-Pq-80c" secondAttribute="bottom" constant="75" id="Kwp-68-fa3"/>
+                            <constraint firstItem="xZv-Pq-80c" firstAttribute="centerY" secondItem="0rb-1N-vPg" secondAttribute="centerY" constant="-100" id="XEh-yX-k2r"/>
+                            <constraint firstItem="xZv-Pq-80c" firstAttribute="centerX" secondItem="0rb-1N-vPg" secondAttribute="centerX" id="xhE-bC-1Yw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O8n-zc-2Vr"/>
                     </view>

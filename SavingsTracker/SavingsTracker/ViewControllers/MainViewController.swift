@@ -17,7 +17,13 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         updateView()
     }
-    
+    override func viewDidLoad() {
+        view.backgroundColor = Appearance.lightColor
+        amountLeftLabel.backgroundColor = Appearance.lightColor
+        amountLeftLabel.textColor = Appearance.mainColor
+        amountLeftLabel.clipsToBounds = true
+        amountLeftLabel.layer.cornerRadius = amountLeftLabel.frame.height/5
+    }
     func updateView(){
         amountLeftLabel.text = currentWeekSavings.amount().currencyStringValue()
     }

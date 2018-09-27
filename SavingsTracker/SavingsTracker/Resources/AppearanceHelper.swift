@@ -15,7 +15,11 @@ enum Appearance {
     static func setTheme() {
         UIButton.appearance(whenContainedInInstancesOf: [AddTransactionViewController.self]).setTitleColor(mainColor, for: .normal)
         UILabel.appearance(whenContainedInInstancesOf: [AddTransactionViewController.self]).textColor = mainColor
-    
+        
+        UITableView.appearance().backgroundColor = Appearance.lightColor
+        UITableViewCell.appearance().backgroundColor = Appearance.lightColor
+        UITableViewCell.appearance().tintColor = Appearance.mainColor
+        
     }
 }
 

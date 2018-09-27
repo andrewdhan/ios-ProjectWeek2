@@ -13,14 +13,10 @@ private let moc = CoreDataStack.shared.mainContext
 
 class TransactionTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //    }
-    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if fetchResultsController.sections?[section].indexTitle == "1"{
-            return "Frivolous Expenses"
+            return "Treat-yourself Expenses"
         } else {
             return "Regular Expenses"
         }
@@ -39,10 +35,21 @@ class TransactionTableViewController: UITableViewController, NSFetchedResultsCon
         let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath)
         let transaction = fetchResultsController.object(at: indexPath)
         cell.textLabel?.text = transaction.title
-        cell.detailTextLabel?.text = transaction.transactionAmount().currencyStringValue()
+        var amountAbs = transaction.transactionAmount().currencyStringValue()
+        amountAbs.removeFirst()
+        cell.detailTextLabel?.text = amountAbs
         return cell
     }
-    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if let headerView = view as? UITableViewHeaderFooterView {
+            headerView.contentView.backgroundColor = Appearance.mainColor
+            headerView.textLabel?.textColor = Appearance.lightColor
+        }
+    }
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.textLabel?.textColor = Appearance.mainColor
+        cell.detailTextLabel?.textColor = Appearance.mainColor
+    }
     // MARK: - NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

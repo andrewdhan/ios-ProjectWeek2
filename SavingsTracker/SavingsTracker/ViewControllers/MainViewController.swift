@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
         amountLeftLabel.textColor = Appearance.mainColor
         amountLeftLabel.clipsToBounds = true
         amountLeftLabel.layer.cornerRadius = amountLeftLabel.frame.height/5
+        
     }
     func updateView(){
         let newAmountString = currentWeekSavings.amount().currencyStringValue()

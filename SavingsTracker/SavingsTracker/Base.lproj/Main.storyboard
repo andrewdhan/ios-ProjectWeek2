@@ -90,8 +90,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-np-da2">
-                                <rect key="frame" x="63" y="573" width="288" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-np-da2">
+                                <rect key="frame" x="63" y="452.5" width="288" height="60"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tW4-nv-re6">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
@@ -127,11 +127,11 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-Pq-80c" customClass="BudgetCircle" customModule="SavingsTracker" customModuleProvider="target">
-                                <rect key="frame" x="57" y="198" width="300" height="300"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xZv-Pq-80c" customClass="BudgetCircle" customModule="SavingsTracker" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="319" width="245" height="58.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-05-bNO">
-                                        <rect key="frame" x="75" y="121" width="150" height="58.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5X-05-bNO">
+                                        <rect key="frame" x="61.5" y="0.0" width="122.5" height="58.5"/>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -141,9 +141,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="u5X-05-bNO" firstAttribute="centerY" secondItem="xZv-Pq-80c" secondAttribute="centerY" id="iuw-50-yfZ"/>
-                                    <constraint firstAttribute="height" constant="300" id="jUg-l3-q4a"/>
-                                    <constraint firstAttribute="width" constant="300" id="mWP-9o-aqX"/>
-                                    <constraint firstItem="u5X-05-bNO" firstAttribute="width" secondItem="xZv-Pq-80c" secondAttribute="width" multiplier="1/2" id="mie-7X-t7E"/>
+                                    <constraint firstAttribute="width" secondItem="u5X-05-bNO" secondAttribute="width" multiplier="2" id="m9A-Oj-hVR"/>
                                     <constraint firstItem="u5X-05-bNO" firstAttribute="centerX" secondItem="xZv-Pq-80c" secondAttribute="centerX" id="qoK-h4-7wA"/>
                                 </constraints>
                             </view>

@@ -22,6 +22,10 @@ import UIKit
     }
     
     func setupCircle(){
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        let height = heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1.0)
+        NSLayoutConstraint.activate([ height])
         clipsToBounds = true
         let radius = frame.width / 2.0
         layer.cornerRadius = radius

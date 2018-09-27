@@ -148,7 +148,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Settings" id="Der-Xy-utq"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ipE-6b-2KX">
                             <connections>
-                                <segue destination="gy7-u6-KhB" kind="presentation" id="6Ya-cu-FuL"/>
+                                <segue destination="gy7-u6-KhB" kind="presentation" identifier="AddTransaction" id="6Ya-cu-FuL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -523,7 +523,6 @@
                                     <state key="normal" title="Confirm"/>
                                     <connections>
                                         <action selector="confirm:" destination="gy7-u6-KhB" eventType="touchUpInside" id="gEI-rP-lk1"/>
-                                        <action selector="confirmLabel:" destination="gy7-u6-KhB" eventType="touchUpInside" id="teD-Hm-SR5"/>
                                     </connections>
                                 </button>
                             </subviews>

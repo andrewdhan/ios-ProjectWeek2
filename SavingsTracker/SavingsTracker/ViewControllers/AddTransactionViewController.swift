@@ -23,15 +23,14 @@ class AddTransactionViewController: UIViewController {
     }
     
     @IBAction func addTransaction(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, animations: {
+        guard Double(digitAccumulator.stringValue()) ?? 0.0 > 0.0 else {return}
+        
+        UIView.animate(withDuration: 0.5){
             self.addDetailView.alpha = 1
              self.itemNameInputField.becomeFirstResponder()
-        }) { (_) in
-           
         }
-        
-        
     }
+
     //MARK: - Setup
     private func setup(){
 
@@ -81,8 +80,17 @@ class AddTransactionViewController: UIViewController {
     }
     
     @IBAction func confirm(_ sender: Any) {
+        let isFrivolous = segmentedControl.selectedSegmentIndex == 0 ? true : false
+        
+        guard let amount = Double(digitAccumulator.stringValue()),
+            let currentWeekSavings = currentWeekSavings,
+            let title = itemNameInputField.text,
+            let transaction = TransactionController.shared.create(amount: amount, title: title, isFrivolous: isFrivolous) else {return}
+        
+        WeeklySavingsController.shared.add(transaction: transaction, to: currentWeekSavings)
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
     
     //MARK: - Numberpad Button Actions
     @IBAction func numberButtonTapped(_ sender: UIButton) {

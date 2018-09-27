@@ -26,7 +26,7 @@ public struct DigitAccumulator {
     public init(){}
     
     public mutating func add(digit: Digit) throws {
-        guard wholeComponent.count < 6 else {
+        guard wholeComponent.count < 5 else {
             throw DigitAccumulatorError.unsupportedAmount
         }
         switch digit {

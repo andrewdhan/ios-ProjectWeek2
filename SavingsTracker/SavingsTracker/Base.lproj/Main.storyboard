@@ -168,6 +168,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="amountLeftLabel" destination="u5X-05-bNO" id="uqK-Kb-yY9"/>
+                        <outlet property="greenCircle" destination="xZv-Pq-80c" id="9uC-ou-5nR"/>
                         <outlet property="weekTrackerLabel1" destination="tW4-nv-re6" id="2Dk-LJ-8We"/>
                         <outlet property="weekTrackerLabel2" destination="3fE-mq-flm" id="iFC-DE-1ub"/>
                         <outlet property="weekTrackerLabel3" destination="yoz-wq-SV7" id="umX-R8-cm4"/>

@@ -12,10 +12,12 @@ import UIKit
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
         setup()
     }
 
     func setup(){
+        originalWidth = self.frame.width
         setupCircle()
     }
     
@@ -26,4 +28,15 @@ import UIKit
         backgroundColor = Appearance.mainColor
         
     }
+    
+    func animate(percent reduction: CGFloat) {
+        var newFrame = self.frame
+        newFrame.size.width = originalWidth - originalWidth/4 * reduction
+        newFrame.size.height = originalWidth - originalWidth/4 * reduction
+        UIView.animate(withDuration: 2) {
+            self.frame = newFrame
+        }
+    }
+    
+    private var originalWidth: CGFloat!
 }

@@ -23,6 +23,7 @@ enum Appearance {
         UITableViewCell.appearance().backgroundColor = Appearance.lightColor
         UITableViewCell.appearance().tintColor = Appearance.mainColor
         
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Appearance.mainColor], for: .normal)
     }
 }
 

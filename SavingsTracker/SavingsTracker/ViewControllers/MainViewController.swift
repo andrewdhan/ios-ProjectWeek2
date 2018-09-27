@@ -25,7 +25,19 @@ class MainViewController: UIViewController {
         amountLeftLabel.layer.cornerRadius = amountLeftLabel.frame.height/5
     }
     func updateView(){
-        amountLeftLabel.text = currentWeekSavings.amount().currencyStringValue()
+        let newAmountString = currentWeekSavings.amount().currencyStringValue()
+        amountLeftLabel.text = newAmountString
+        
+        guard let oldAmountString = amountLeftLabel.text,
+            let oldAmount = Double(oldAmountString),
+            let newAmount = Double(newAmountString) else {return}
+        
+
+        if oldAmount > newAmount {
+            let reduction = CGFloat((oldAmount-newAmount)/oldAmount)
+            greenCircle.animate(percent: reduction)
+        }
+        
     }
     
     // MARK: - Navigation
@@ -61,6 +73,8 @@ class MainViewController: UIViewController {
         }
         return result ?? weeklySavingsController.create(amount: weeklyBudget, weekNumber: Date().weekNumber())
     }()
+    @IBOutlet weak var greenCircle: BudgetCircle!
+    
     
     private let weeklyBudget = 100.00
     private let weeklySavingsController = WeeklySavingsController.shared
